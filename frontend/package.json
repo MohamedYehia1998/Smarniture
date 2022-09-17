@@ -26,9 +26,21 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "ls && pwd && chmod +x bin/deploy.sh && bin/deploy.sh"
+    "deploy": "npm install -f && npm run build && chmod +x bin/deploy.sh && bin/deploy.sh"
   },
 
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
     "@types/antd": "^1.0.0",
     "@types/react-bootstrap": "^0.32.30",
