@@ -7,7 +7,7 @@ import classes from './Home.module.css'
 function Home() {
     return (
 
-            <Carousel interval={550} variant="dark" className={classes.carousel}>
+            <Carousel interval={1500} variant="dark" className={classes.carousel}>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
