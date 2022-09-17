@@ -12,12 +12,19 @@ jobs:
     steps:
       # install node and checkout code
       - node/install:
-          node-version: '16.16.0' 
+          node-version: '16.16.0'
+      # change directory from the .circleci folder to use root-level package.json file
+      - checkout
       - run:
-          name: Test CircleCi
+          name: Install frontend dependencies
           command: |
-            echo "CircleCi - Smarniture!!"
-            echo "By Mohamed Ghanem"
+            echo "Installing frontend dependencies ..."
+            npm run frontend:install
+      - run:
+          name: Build frontend
+          command: |
+            echo "Building frontend ..."
+            npm run frontend:build
             
 workflows:
   Smarniture:
