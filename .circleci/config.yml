@@ -37,7 +37,7 @@ jobs:
             node-version: '16.16.0' 
         - aws-cli/setup
         - checkout
-         - run:
+        - run:
             name: Deploy Frontend
             command: |
               echo "Deploying Frontend ..."
