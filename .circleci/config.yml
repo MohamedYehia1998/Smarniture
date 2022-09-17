@@ -9,4 +9,9 @@ jobs:
       - run:
           name: Install Front-End Dependencies
           command: |
-            echo "CircleCi - Smarniture!!" 
+            echo "CircleCi - Smarniture!!"
+            
+workflows:
+  Smarniture:
+    jobs:
+      - deploy-job
