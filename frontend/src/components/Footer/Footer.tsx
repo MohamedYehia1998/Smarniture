@@ -3,8 +3,8 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 import logo from '../../images/logo.png';
 import { useSelector } from "react-redux";
 import { RootState } from '../../store';
-import footerItems from '../../lang/footer';
 import { fixLanguage } from '../../utils';
+import { footerItems } from '../../lang';
 
 export default function PageFooter() {
 

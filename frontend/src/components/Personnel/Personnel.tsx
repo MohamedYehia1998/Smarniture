@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
 import { useSelector } from 'react-redux';
-import aboutUsItems from '../../lang/aboutus';
+import { aboutUsItems } from '../../lang';
 import { RootState } from '../../store';
 import { fixLanguage } from '../../utils';
 import classes from './Personnel.module.css'
