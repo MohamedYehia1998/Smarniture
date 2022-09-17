@@ -57,7 +57,7 @@ export default function PageFooter() {
                 </MDBContainer>
             </section>
 
-            <div className='text-center p-4' style={{ color: 'white', backgroundColor: '#707070' }}>
+            <div className='text-center p-4' style={{ color: 'white', backgroundColor: '#30a9ab' }}>
                 <div style={{ textAlign: 'left', display: 'inline' }}>
                     <img width={20} src={logo} alt="" />
                 </div> <b>Smarniture </b>
