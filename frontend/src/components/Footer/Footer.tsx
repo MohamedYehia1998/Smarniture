@@ -1,10 +1,16 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import logo from '../../images/logo.png';
-import logo2 from '../../images/logo2.png';
-
+import { useSelector } from "react-redux";
+import { RootState } from '../../store';
+import footerItems from '../../lang/footer';
 
 export default function PageFooter() {
+
+    let language = useSelector(
+        (state: RootState) => state.Language.lang
+    ) as string;
+
     return (
         <MDBFooter style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }} className='text-center text-lg-start text-muted'>
             <section className='d-flex justify-content-center p-4 border-bottom'>
@@ -44,13 +50,13 @@ export default function PageFooter() {
                         <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
                             <p>
                                 <MDBIcon icon="home" className="me-2" />
-                                Alexandria, Egypt
+                                {footerItems[language].location}
                             </p>
 
                         </MDBCol>
                         <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
                             <p>
-                                <MDBIcon icon="phone" className="me-3" /> + 20 12 8 2111 789
+                                <MDBIcon icon="phone" className="me-3" /> {footerItems[language].phone}
                             </p>
                         </MDBCol>
                     </MDBRow>
