@@ -16,10 +16,7 @@ const App: React.FC = () => (
       </Routes>
     </Container>
     <PageFooter />
-
   </>
-
-
 );
 
 export default App;

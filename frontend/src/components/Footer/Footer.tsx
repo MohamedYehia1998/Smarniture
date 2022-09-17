@@ -4,6 +4,7 @@ import logo from '../../images/logo.png';
 import { useSelector } from "react-redux";
 import { RootState } from '../../store';
 import footerItems from '../../lang/footer';
+import { fixLanguage } from '../../utils';
 
 export default function PageFooter() {
 
@@ -50,13 +51,13 @@ export default function PageFooter() {
                         <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
                             <p>
                                 <MDBIcon icon="home" className="me-2" />
-                                {footerItems[language].location}
+                                {footerItems[fixLanguage(language)].location}
                             </p>
 
                         </MDBCol>
                         <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
                             <p>
-                                <MDBIcon icon="phone" className="me-3" /> {footerItems[language].phone}
+                                <MDBIcon icon="phone" className="me-3" /> {footerItems[fixLanguage(language)].phone}
                             </p>
                         </MDBCol>
                     </MDBRow>

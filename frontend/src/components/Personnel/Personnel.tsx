@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { useSelector } from 'react-redux';
 import aboutUsItems from '../../lang/aboutus';
 import { RootState } from '../../store';
+import { fixLanguage } from '../../utils';
 import classes from './Personnel.module.css'
 
 interface PersonnelProps {
@@ -23,10 +24,10 @@ const Personnel: React.FC<PersonnelProps> = ({ personkey }) => {
                 <img className={classes.pic}  src={require(`../../images/personnel/${personkey}.png`)} alt="" />
             </div>
             <Card.Body>
-                <div style={{ textAlign: 'center' }}><Card.Title>{aboutUsItems[language][personkey].name}</Card.Title></div>
+                <div style={{ textAlign: 'center' }}><Card.Title>{aboutUsItems[fixLanguage(language)][personkey].name}</Card.Title></div>
                 <div style={{ textAlign: 'center', margin: '15px auto', color: 'grey', fontWeight: '500' }}>
                     <Card.Text>
-                        {aboutUsItems[language][personkey].role}
+                        {aboutUsItems[fixLanguage(language)][personkey].role}
                     </Card.Text>
                 </div>
                 <div style={{ marginTop: '15px' }}>
