@@ -3,12 +3,13 @@ version: 2.1
 jobs:
   deploy-job:
     docker:
-      - image: cimg/node:17.2.0 # the primary container, where your job's 
+      - image: cimg/node:17.2.0 # the primary container, where your job will be running (mandatory)
     steps:
       - run:
-          name: Install Front-End Dependencies
+          name: Test CircleCi
           command: |
             echo "CircleCi - Smarniture!!"
+            echo "By Mohamed Ghanem"
             
 workflows:
   Smarniture:
