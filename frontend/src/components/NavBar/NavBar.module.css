@@ -1,0 +1,45 @@
+
+.navitem{
+    text-decoration: none;
+    color: white;
+    padding: 7px 10px;
+    outline: 1px solid transparent;
+    font-size: 19px;
+}
+
+.navitem:hover{
+    transform: scale(1.0);
+    color:white;
+    outline: 1px solid white;
+}
+
+.dropdown{
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+}
+
+.dropdown:hover{
+    color:white;
+}
+
+
+@media (max-width: 908px) {
+    .navitem{
+        padding: 10px 1px;
+    }
+    
+    .navitem:hover{
+        transform: scale(1.0);
+        text-decoration: none;
+    }
+
+    .dropdown:hover{
+        transform: scale(1.0);
+        text-decoration: none;
+    }
+}
+
+
+
+
