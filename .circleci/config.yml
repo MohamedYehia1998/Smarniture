@@ -31,7 +31,7 @@ jobs:
             npm run frontend:build
     deploy:
        docker:
-        - image: "cimg/base:stable" # the primary container, where your job will be running (mandatory)
+        - image: cimg/base:stable # the primary container, where your job will be running (mandatory)
        steps:
         - node/install:
             node-version: '16.16.0' 
