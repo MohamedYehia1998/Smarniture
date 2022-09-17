@@ -30,14 +30,14 @@ const Personnel: React.FC<PersonnelProps> = ({ personkey }) => {
                         {aboutUsItems[fixLanguage(language)][personkey].role}
                     </Card.Text>
                 </div>
-                <div style={{ marginTop: '15px' }}>
+                {/* <div style={{ marginTop: '15px' }}>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                         Some quick example text to build on the card title and make up the
                         bulk of the card's content.
                     </Card.Text>
-                </div>
+                </div> */}
             </Card.Body>
         </Card>
     )
