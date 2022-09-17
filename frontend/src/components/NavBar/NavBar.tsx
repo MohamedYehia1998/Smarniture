@@ -42,13 +42,13 @@ function NavBar() {
     }, [])
 
     const changeLanguage = (language: string) => {
-        if(language === 'ar'){
+        if (language === 'ar') {
             localStorage.setItem('lang', 'ar')
             setnavSeparator("ms-auto")
             dispatch(setLanguage({ lang: 'ar' }));
             document.documentElement.dir = 'rtl'
         }
-        else{
+        else {
             localStorage.setItem('lang', 'en')
             setnavSeparator("me-auto")
             dispatch(setLanguage({ lang: 'en' }));
@@ -76,7 +76,7 @@ function NavBar() {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <NavDropdown title={<span className={classes.dropdown}>{navbarItems[fixLanguage(language)].language}</span>}>
+                        <NavDropdown title={<span className={classes.dropdown}><img width={40} src={language === 'ar' ? ar : en} alt="" /></span>}>
                             <NavDropdown.Item onClick={() => { changeLanguage('ar') }}>العربية <div style={{ display: 'inline', float: 'left' }}><img src={ar} width={20} alt="" /></div></NavDropdown.Item>
                             <NavDropdown.Item onClick={() => { changeLanguage('en') }}>English <div style={{ display: 'inline', float: 'left' }}><img src={en} width={20} alt="" /></div></NavDropdown.Item>
                         </NavDropdown>
