@@ -4,7 +4,7 @@ import Personnel from '../Personnel/Personnel';
 
 function About() {
     return (
-        <Row>
+        <Row style={{marginBottom:'120px'}}>
             <Col xs={12} md={4} style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: '10vh' }}>
                 <Personnel personkey="askar" />
             </Col>
