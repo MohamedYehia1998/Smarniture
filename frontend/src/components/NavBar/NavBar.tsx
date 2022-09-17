@@ -24,7 +24,7 @@ function NavBar() {
     ) as string;
 
     useEffect(() => {
-        if (!language || language === 'undefined') {
+        if (!language || language === undefined) {
             localStorage.setItem('lang', 'en')
             setnavSeparator("me-auto")
         }

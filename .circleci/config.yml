@@ -18,6 +18,10 @@ jobs:
       - run:
           name: Install frontend dependencies
           command: |
+            echo "NODE --version" 
+            echo $(node --version)
+            echo "NPM --version" 
+            echo $(npm --version)
             echo "Installing frontend dependencies ..."
             npm run frontend:install
       - run:
