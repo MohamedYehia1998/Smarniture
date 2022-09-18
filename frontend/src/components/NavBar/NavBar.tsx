@@ -76,7 +76,7 @@ function NavBar() {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <NavDropdown title={<span className={classes.dropdown}><img width={40} src={language === 'ar' ? ar : en} alt="" /></span>}>
+                        <NavDropdown title={<span className={classes.dropdown}><img className={classes.flag} src={language === 'ar' ? ar : en} alt="" /></span>}>
                             <NavDropdown.Item onClick={() => { changeLanguage('ar') }}>العربية <div style={{ display: 'inline', float: 'left' }}><img src={ar} width={20} alt="" /></div></NavDropdown.Item>
                             <NavDropdown.Item onClick={() => { changeLanguage('en') }}>English <div style={{ display: 'inline', float: 'left' }}><img src={en} width={20} alt="" /></div></NavDropdown.Item>
                         </NavDropdown>

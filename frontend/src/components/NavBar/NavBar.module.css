@@ -23,10 +23,19 @@
     color:white;
 }
 
+.flag{
+    width: 42px;
+}
+
+.flag:hover{
+    transform: scale(1.1);
+}
+
 
 @media (max-width: 908px) {
     .navitem{
         padding: 10px 1px;
+        font-size: 14px;
     }
     
     .navitem:hover{
@@ -34,9 +43,17 @@
         text-decoration: none;
     }
 
+    .dropdown{
+        font-size: 14px;
+    }
+
     .dropdown:hover{
         transform: scale(1.0);
         text-decoration: none;
+    }
+
+    .flag{
+        width: 26px;
     }
 }
 
