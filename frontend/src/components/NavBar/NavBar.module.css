@@ -25,6 +25,7 @@
 
 .flag{
     width: 42px;
+    cursor: pointer;
 }
 
 .flag:hover{
