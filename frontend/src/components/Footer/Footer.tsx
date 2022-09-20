@@ -38,26 +38,26 @@ export default function PageFooter() {
                 </div>
             </section>
 
-            <section className=''>
-                <MDBContainer className='text-center text-md-start mt-5'>
+            <section style={{fontSize:'14px'}} className=''>
+                <MDBContainer className='text-center text-md-start'>
                     <MDBRow className='mt-3'>
 
-                        <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
+                        <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto'>
                             <p>
-                                <MDBIcon icon="envelope" className="me-3" />
+                                <MDBIcon icon="envelope" className="mx-3" />
                                 info@smarniture.com
                             </p>
                         </MDBCol>
-                        <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
+                        <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto'>
                             <p>
-                                <MDBIcon icon="home" className="me-2" />
+                                <MDBIcon icon="home" className="mx-2" />
                                 {footerItems[fixLanguage(language)].location}
                             </p>
 
                         </MDBCol>
-                        <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto mb-md-4 mb-4'>
+                        <MDBCol style={{ textAlign: 'center' }} md="4" sm="12" className='mx-auto'>
                             <p>
-                                <MDBIcon icon="phone" className="me-3" /> {footerItems[fixLanguage(language)].phone}
+                                <MDBIcon icon="phone" className="mx-3" /> {footerItems[fixLanguage(language)].phone}
                             </p>
                         </MDBCol>
                     </MDBRow>
