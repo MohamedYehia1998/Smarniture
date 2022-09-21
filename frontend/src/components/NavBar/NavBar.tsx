@@ -17,13 +17,22 @@ import { config } from '../../config';
 
 function NavBar() {
 
+    // language settings
     let dispatch = useDispatch();
-
     let [navSeparator, setnavSeparator] = useState<string>("")
-
     let language = useSelector(
         (state: RootState) => state.Language.lang
     ) as string;
+
+
+    // drop down hide/show
+    let [show, setShow] = useState(false);
+    const showDropdown = (event: React.FormEvent<EventTarget>) => {
+        setShow(!show);
+    }
+    const hideDropdown = (event: React.FormEvent<EventTarget>) => {
+        setShow(false);
+    }
 
     useEffect(() => {
         if (!language || language === undefined) {
@@ -52,6 +61,7 @@ function NavBar() {
         }
     }, [])
 
+    // switch language and set frontend on flag click
     const changeLanguage = (language: string) => {
         if (language === 'ar') {
             localStorage.setItem('lang', 'ar')
@@ -76,7 +86,7 @@ function NavBar() {
                     <Nav className={navSeparator}>
                         <NavLink className={classes.navitem} to="/">{navbarItems[fixLanguage(language)].home}</NavLink>
                         <NavLink className={classes.navitem} to="/about">{navbarItems[fixLanguage(language)].aboutUs}</NavLink>
-                        <NavDropdown title={<span className={classes.dropdown}>{navbarItems[fixLanguage(language)].products}</span>}>
+                        <NavDropdown show={show} onMouseEnter={showDropdown} onMouseLeave={hideDropdown} title={<span className={classes.dropdown}>{navbarItems[fixLanguage(language)].products}</span>}>
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
