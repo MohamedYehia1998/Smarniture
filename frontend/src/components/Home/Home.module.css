@@ -20,16 +20,32 @@
     opacity: 0.8;
 }
 
+.slogan {
+    font-weight: 900;
+    font-size: 62px; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    margin-top: 10vh;
+}
+
 
 @media (max-width: 908px) {
     .titleSectionEN {
         padding: 100px;
         left: 0;
+        width: auto;
     }
     
     .titleSectionAR {
         padding: 100px;
         left: 0;
+        width: auto;
     }
+
+    .slogan {
+        font-size: 42px; 
+    }
+    
     
 }

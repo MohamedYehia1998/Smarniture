@@ -22,8 +22,8 @@ function Home() {
     return (
 
         <Row className={language === 'ar' ? classes.titleSectionAR : language === 'en' ? classes.titleSectionEN : config.defaultLang === 'ar' ? classes.titleSectionAR : classes.titleSectionEN}>
-            <Col xs={12} md={8} style={{ fontWeight: 900, fontSize: '72px', display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: '10vh' }}>
-                <div style={{ whiteSpace: 'pre-line', letterSpacing: '0.8rem', color: '#343f47', fontWeight: 600 }}>
+            <Col xs={12} md={8} className={classes.slogan}>
+                <div style={{ whiteSpace: 'pre-line', letterSpacing: '0.3rem', color: '#343f47', fontWeight: 600, padding:"50px" }}>
                     {homeItems[fixLanguage(language)].slogan}
                 </div>
             </Col>
