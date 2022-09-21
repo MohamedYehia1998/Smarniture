@@ -11,7 +11,6 @@ interface PersonnelProps {
     children?: React.ReactNode;
 }
 
-
 const Personnel: React.FC<PersonnelProps> = ({ personkey }) => {
 
     let language = useSelector(

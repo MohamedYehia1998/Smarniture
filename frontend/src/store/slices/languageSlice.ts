@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { config } from "../../config";
 
 const initialState = {
-    lang: localStorage.getItem("lang") ? localStorage.getItem("lang") : 'en',
+    lang: localStorage.getItem("lang") ? localStorage.getItem("lang") : config.defaultLang,
 };
 
 export const languageSlice = createSlice({

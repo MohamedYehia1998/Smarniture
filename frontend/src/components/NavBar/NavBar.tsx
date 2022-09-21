@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from '../../store';
 import { setLanguage } from '../../store/slices/languageSlice';
 import { fixLanguage } from '../../utils';
+import { config } from '../../config';
 
 function NavBar() {
 
@@ -26,7 +27,7 @@ function NavBar() {
 
     useEffect(() => {
         if (!language || language === undefined) {
-            localStorage.setItem('lang', 'en')
+            localStorage.setItem('lang', config.defaultLang)
             setnavSeparator("me-auto")
         }
         else {
@@ -34,9 +35,19 @@ function NavBar() {
                 document.documentElement.dir = 'rtl'
                 setnavSeparator("ms-auto")
             }
-            else {
+            else if (language == 'en') {
                 document.documentElement.dir = 'ltr'
                 setnavSeparator("me-auto")
+            }
+            else {
+                if (config.defaultLang === 'ar') {
+                    document.documentElement.dir = 'rtl'
+                    setnavSeparator("ms-auto")
+                }
+                else if (config.defaultLang === 'en') {
+                    document.documentElement.dir = 'ltr'
+                    setnavSeparator("me-auto")
+                }
             }
         }
     }, [])
@@ -76,11 +87,11 @@ function NavBar() {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        <div><span onClick={() => {language === 'ar'? changeLanguage('en') : changeLanguage('ar')}} className={classes.dropdown}><img className={classes.flag} src={language === 'ar' ? ar : en} alt="" /></span></div>
-                        {/* <NavDropdown title={<span className={classes.dropdown}><img className={classes.flag} src={language === 'ar' ? ar : en} alt="" /></span>}>
-                            <NavDropdown.Item onClick={() => { changeLanguage('ar') }}>العربية <div style={{ display: 'inline', float: 'left' }}><img src={ar} width={20} alt="" /></div></NavDropdown.Item>
-                            <NavDropdown.Item onClick={() => { changeLanguage('en') }}>English <div style={{ display: 'inline', float: 'left' }}><img src={en} width={20} alt="" /></div></NavDropdown.Item>
-                        </NavDropdown> */}
+                        <div>
+                            <span onClick={() => { language === 'ar' ? changeLanguage('en') : changeLanguage('ar') }} className={classes.dropdown}>
+                                <img className={classes.flag} src={language === 'ar' ? ar : language === 'en' ? en : (config.defaultLang === 'en' ? en : ar)} alt="" />
+                            </span>
+                        </div>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -1,6 +1,8 @@
+import { config } from "../config"
+
 const fixLanguage = (language: string) => {
     if(!['en', 'ar'].includes(language) ){
-        return 'en'
+        return config.defaultLang
     }
     return language
 }
