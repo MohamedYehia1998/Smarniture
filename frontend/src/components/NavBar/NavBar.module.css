@@ -3,24 +3,27 @@
     text-decoration: none;
     color: white;
     padding: 7px 10px;
-    outline: 1px solid transparent;
-    font-size: 19px;
+    border: 1px solid transparent;
+    font-size: 16px;
 }
 
 .navitem:hover{
     transform: scale(1.0);
-    color:white;
-    outline: 1px solid white;
+    color:#30a9ab;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 50px 50px 50px 50px;
+    border-color: #30a9ab;
 }
 
 .dropdown{
     text-decoration: none;
     color: white;
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .dropdown:hover{
-    color:white;
+    color: white;
 }
 
 .flag{
@@ -35,7 +38,7 @@
 
 @media (max-width: 908px) {
     .navitem{
-        padding: 10px 1px;
+        padding: 10px;
         font-size: 14px;
     }
     
@@ -45,6 +48,7 @@
     }
 
     .dropdown{
+        padding: 10px;
         font-size: 14px;
     }
 

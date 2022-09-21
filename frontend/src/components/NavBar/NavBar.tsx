@@ -70,7 +70,7 @@ function NavBar() {
     return (
         <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#30a9ab' }} variant="dark">
             <Container>
-                <NavLink style={{ margin: '10px', cursor: 'context-menu' }} to="/"><img width={55} src={logo} alt="" /></NavLink>
+                <NavLink style={{ margin: '10px', cursor: 'context-menu' }} to="/"><img width={45} src={logo} alt="" /></NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className={navSeparator}>
