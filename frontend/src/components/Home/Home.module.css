@@ -33,13 +33,13 @@
 @media (max-width: 908px) {
     .titleSectionEN {
         padding: 100px;
-        left: calc(-50vw + 50.3%);
+        left: calc(-50vw + 50%);
         width: auto;
     }
     
     .titleSectionAR {
         padding: 100px;
-        right: calc(-50vw + 50.3%);
+        right: calc(-50vw + 50%);
         width: auto;
     }
 
