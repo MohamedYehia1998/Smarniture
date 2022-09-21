@@ -1,4 +1,4 @@
-const footerItems = {
+const homeItems = {
     "en":{
         "phone": "+20 114 269 9288",
         "location": "Alexandria, Egypt",
@@ -9,4 +9,4 @@ const footerItems = {
     }
 }
 
-export default footerItems
+export default homeItems
