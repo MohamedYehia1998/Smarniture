@@ -1,42 +1,42 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from '../../images/logo.png';
-import ar from '../../images/lang/egypt.png';
-import en from '../../images/lang/uk.png';
-import classes from './NavBar.module.css';
-import { NavLink } from 'react-router-dom';
-import { navbarItems } from '../../lang';
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from '../../store';
-import { setLanguage } from '../../store/slices/languageSlice';
-import { fixLanguage } from '../../utils';
-import { config } from '../../config';
+import Container from 'react-bootstrap/Container'
+import Nav from 'react-bootstrap/Nav'
+import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import logo from '../../images/logo.png'
+import ar from '../../images/lang/egypt.png'
+import en from '../../images/lang/uk.png'
+import classes from './NavBar.module.css'
+import { NavLink } from 'react-router-dom'
+import { navbarItems } from '../../lang'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from "react-redux"
+import { RootState } from '../../store'
+import { setLanguage } from '../../store/slices/languageSlice'
+import { fixLanguage } from '../../utils'
+import { config } from '../../config'
 
 function NavBar() {
 
     // language settings
-    let dispatch = useDispatch();
+    let dispatch = useDispatch()
     let [navSeparator, setnavSeparator] = useState<string>("")
     let language = useSelector(
         (state: RootState) => state.Language.lang
-    ) as string;
+    ) as string
 
 
-    // drop down hide/show
-    let [show, setShow] = useState(false);
+    // drop down hide/show on hover (only on desktop)
+    let [show, setShow] = useState(false)
     const showDropdown = (event: React.FormEvent<EventTarget>) => {
         let mobilePhoneViewPort : boolean = window.matchMedia('(max-width: 908px)').matches
         if(!mobilePhoneViewPort){
-            setShow(!show);
+            setShow(!show)
         }
     }
     const hideDropdown = (event: React.FormEvent<EventTarget>) => {
         let mobilePhoneViewPort : boolean = window.matchMedia('(max-width: 908px)').matches
         if(!mobilePhoneViewPort){
-            setShow(false);
+            setShow(false)
         }
     }
 
@@ -72,13 +72,13 @@ function NavBar() {
         if (language === 'ar') {
             localStorage.setItem('lang', 'ar')
             setnavSeparator("ms-auto")
-            dispatch(setLanguage({ lang: 'ar' }));
+            dispatch(setLanguage({ lang: 'ar' }))
             document.documentElement.dir = 'rtl'
         }
         else {
             localStorage.setItem('lang', 'en')
             setnavSeparator("me-auto")
-            dispatch(setLanguage({ lang: 'en' }));
+            dispatch(setLanguage({ lang: 'en' }))
             document.documentElement.dir = 'ltr'
         }
     }
@@ -112,7 +112,7 @@ function NavBar() {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-    );
+    )
 }
 
-export default NavBar;
+export default NavBar
