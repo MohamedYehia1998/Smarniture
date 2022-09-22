@@ -28,10 +28,16 @@ function NavBar() {
     // drop down hide/show
     let [show, setShow] = useState(false);
     const showDropdown = (event: React.FormEvent<EventTarget>) => {
-        setShow(!show);
+        let mobilePhoneViewPort : boolean = window.matchMedia('(max-width: 908px)').matches
+        if(!mobilePhoneViewPort){
+            setShow(!show);
+        }
     }
     const hideDropdown = (event: React.FormEvent<EventTarget>) => {
-        setShow(false);
+        let mobilePhoneViewPort : boolean = window.matchMedia('(max-width: 908px)').matches
+        if(!mobilePhoneViewPort){
+            setShow(false);
+        }
     }
 
     useEffect(() => {
@@ -86,7 +92,7 @@ function NavBar() {
                     <Nav className={navSeparator}>
                         <NavLink className={classes.navitem} to="/">{navbarItems[fixLanguage(language)].home}</NavLink>
                         <NavLink className={classes.navitem} to="/about">{navbarItems[fixLanguage(language)].aboutUs}</NavLink>
-                        <NavDropdown show={show} onMouseEnter={showDropdown} onMouseLeave={hideDropdown} title={<span className={classes.dropdown}>{navbarItems[fixLanguage(language)].products}</span>}>
+                        <NavDropdown show={show} onClick={() => setShow(!show)} onMouseEnter={showDropdown} onMouseLeave={hideDropdown} title={<span className={classes.dropdown}>{navbarItems[fixLanguage(language)].products}</span>}>
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
