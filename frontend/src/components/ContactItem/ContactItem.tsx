@@ -11,9 +11,9 @@ const ContactItem: React.FC<ContactItemProps> = ({ itemKey }) => {
 
 
     return (
-        <Card border="light" style={{ width: '18rem' }}>
+        <Card border="light" style={{ width: '12rem' }}>
             <div style={{ textAlign: 'center' }}>
-                <img style={{border:'none', width: '180px', borderRadius: '65%'}}  src={require(`../../images/contact/${itemKey}.png`)} alt="" />
+                <img style={{border:'none', width: '90px', borderRadius: '65%'}}  src={require(`../../images/contact/${itemKey}.png`)} alt="" />
             </div>
         </Card>
     )

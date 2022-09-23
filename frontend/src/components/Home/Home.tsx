@@ -46,7 +46,7 @@ function Home() {
                 {/* <Col xs={12} md={4} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '10vh' }}>
                     <ContactItem itemKey="phone" />
                 </Col> */}
-                <Col xs={12} md={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '10vh' }}>
+                <Col xs={6} md={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '10vh' }}>
                     <ContactItem itemKey="phone" />
                     <div>
                         <a style={{ textDecoration: 'none' }} href="https://wa.me/201142699288/?text=سلام عليكم Smarniture .. عندي استفسار بخصوص">
@@ -55,7 +55,7 @@ function Home() {
                     </div>
 
                 </Col>
-                <Col xs={12} md={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '10vh' }}>
+                <Col xs={6} md={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '10vh' }}>
                     <ContactItem itemKey="email" />
                     <a href="mailto: info@smarniture.com">info@smarniture.com</a>
                 </Col>
