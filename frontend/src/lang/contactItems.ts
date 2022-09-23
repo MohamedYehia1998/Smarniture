@@ -1,4 +1,4 @@
-const homeItems = {
+const contactItems = {
     "en":{
         "phone": "+20 114 269 9288",
     },
@@ -7,4 +7,4 @@ const homeItems = {
     }
 }
 
-export default homeItems
+export default contactItems

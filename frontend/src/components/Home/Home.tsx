@@ -13,7 +13,7 @@ import { RootState } from '../../store';
 import { useSelector } from 'react-redux';
 import { config } from '../../config';
 import { fixLanguage } from '../../utils';
-import { footerItems, homeItems } from '../../lang';
+import { contactItems, homeItems } from '../../lang';
 import ContactItem from '../ContactItem/ContactItem';
 import { Row, Col } from 'react-bootstrap';
 
@@ -50,7 +50,7 @@ function Home() {
                     <ContactItem itemKey="phone" />
                     <div>
                         <a target="_blank" style={{ textDecoration: 'none' }} href="https://wa.me/201142699288/?text=سلام عليكم Smarniture .. عندي استفسار بخصوص">
-                            {footerItems[fixLanguage(language)].phone} <span><img width={25} src={whatsapp} alt="" /></span>
+                            {contactItems[fixLanguage(language)].phone} <span><img width={25} src={whatsapp} alt="" /></span>
                         </a>
                     </div>
 

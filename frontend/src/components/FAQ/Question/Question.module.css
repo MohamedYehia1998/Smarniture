@@ -4,7 +4,8 @@
     width: 50vw; 
     padding: 20px; 
     background-color: #e7e7e7; 
-    border-radius: 25px 25px 25px 25px
+    border-radius: 25px 25px 25px 25px;
+    font-weight: bold;
 }
 
 @media (max-width: 908px) {
