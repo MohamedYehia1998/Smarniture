@@ -28,7 +28,7 @@ function Home() {
         <>
             <Row style={{ backgroundImage: `url(${bg})`, backgroundPosition: '0% 95%' }} className={language === 'ar' ? classes.titleSectionAR : language === 'en' ? classes.titleSectionEN : config.defaultLang === 'ar' ? classes.titleSectionAR : classes.titleSectionEN}>
                 <Col xs={12} md={8} className={classes.slogan}>
-                    <div style={{ whiteSpace: 'pre-line', color: '#626262', fontFamily: 'Akaya Kanadaka', fontWeight: 600, padding: "50px" }}>
+                    <div style={{ whiteSpace: 'pre-line', color: '#626262', fontFamily: 'Akaya Kanadaka', fontWeight: 600, padding: "30px" }}>
                         {homeItems[fixLanguage(language)].slogan}
                     </div>
                 </Col>

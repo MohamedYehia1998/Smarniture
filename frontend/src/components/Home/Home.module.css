@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
 .titleSectionEN {
-    padding: 100px;
+    padding: 80px;
     position: relative;             /*escape container*/
     left: calc(-50vw + 49.3%);      /*escape container*/
     width: 100vw;                   /*escape container*/
@@ -11,7 +11,7 @@
 }
 
 .titleSectionAR {
-    padding: 100px;
+    padding: 80px;
     position: relative;
     right: calc(-50vw + 49.3%);
     width: 100vw;
@@ -45,7 +45,7 @@
     }
 
     .slogan {
-        font-size: 62px; 
+        font-size: 36px; 
     }
     
     
