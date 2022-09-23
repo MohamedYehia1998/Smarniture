@@ -49,7 +49,7 @@ function Home() {
                 <Col xs={6} md={6} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '10vh' }}>
                     <ContactItem itemKey="phone" />
                     <div>
-                        <a style={{ textDecoration: 'none' }} href="https://wa.me/201142699288/?text=سلام عليكم Smarniture .. عندي استفسار بخصوص">
+                        <a target="_blank" style={{ textDecoration: 'none' }} href="https://wa.me/201142699288/?text=سلام عليكم Smarniture .. عندي استفسار بخصوص">
                             {footerItems[fixLanguage(language)].phone} <span><img width={25} src={whatsapp} alt="" /></span>
                         </a>
                     </div>

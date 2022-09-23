@@ -14,7 +14,7 @@ export default function PageFooter() {
 
     return (
         <MDBFooter style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }} className='text-center text-lg-start text-muted'>
-            <section className='d-flex justify-content-center p-3 border-bottom'>
+            {/* <section className='d-flex justify-content-center p-3 border-bottom'>
 
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <a href='' className='me-4 text-reset'>
@@ -36,7 +36,7 @@ export default function PageFooter() {
                         <MDBIcon fab icon="github" />
                     </a>
                 </div>
-            </section>
+            </section> */}
 
             {/* <section style={{fontSize:'14px'}} className=''>
                 <MDBContainer className='text-center text-md-start'>
