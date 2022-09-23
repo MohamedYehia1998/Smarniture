@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
 .titleSectionEN {
     padding: 100px;
-    position: relative;
-    left: calc(-50vw + 49.3%);
-    width: 100vw;
+    position: relative;             /*escape container*/
+    left: calc(-50vw + 49.3%);      /*escape container*/
+    width: 100vw;                   /*escape container*/
     margin: 0 0 0 0px;
     background: linear-gradient(90deg, rgb(186, 243, 255)gb(255, 255, 255) 81%);
     background-position: 50% 99%;
