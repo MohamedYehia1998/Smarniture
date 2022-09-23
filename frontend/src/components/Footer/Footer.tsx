@@ -38,7 +38,7 @@ export default function PageFooter() {
                 </div>
             </section>
 
-            <section style={{fontSize:'14px'}} className=''>
+            {/* <section style={{fontSize:'14px'}} className=''>
                 <MDBContainer className='text-center text-md-start'>
                     <MDBRow className='mt-3'>
 
@@ -62,7 +62,7 @@ export default function PageFooter() {
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
-            </section>
+            </section> */}
 
             <div className='text-center p-4' style={{ color: 'white', backgroundColor: '#30a9ab' }}>
                 <div style={{ textAlign: 'left', display: 'inline' }}>

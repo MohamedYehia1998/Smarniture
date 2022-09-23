@@ -101,6 +101,7 @@ function NavBar() {
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <NavLink className={classes.navitem} to="/faq">{navbarItems[fixLanguage(language)].contact}</NavLink>
                     </Nav>
                     <Nav>
                         <div>
