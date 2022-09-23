@@ -31,7 +31,7 @@ export default function Contact() {
 
                 <Col onClick={() => setQ3(!q3)} xs={12} style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row', justifyContent: 'center', marginTop: '10vh' }}>
                     <ReactCardFlip isFlipped={q3} flipDirection="horizontal">
-                        <Question question="How often do you exercise weekly?" />
+                        <Question question="How often do you exercise?" />
                         <Answer answer="Usually twice per week but when I am busy, it's only once." />
                     </ReactCardFlip>
                 </Col>

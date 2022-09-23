@@ -4,7 +4,7 @@
     color: white;
     padding: 7px 10px;
     border: 1px solid transparent;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .navitem:hover{
@@ -19,7 +19,7 @@
 .dropdown{
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .dropdown:hover{

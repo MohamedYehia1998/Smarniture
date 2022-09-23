@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from './Question.module.css'
 
 interface questionProps {
     question: string
@@ -6,7 +7,7 @@ interface questionProps {
 
 const Question: React.FC<questionProps> = ({question}) => {
     return (
-        <div style={{ minHeight: '10vh', width: '80vw', padding: '20px', backgroundColor: '#e7e7e7', borderRadius: '25px 25px 25px 25px' }}>
+        <div className={classes.question}>
             {question}
         </div>
     )
