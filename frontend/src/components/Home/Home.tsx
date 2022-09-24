@@ -35,7 +35,7 @@ function Home() {
                 <Col xs={12} md={4} className="my-5" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                     <img
                         src={img2}
-                        width={400}
+                        width={window.matchMedia('(max-width: 908px)').matches ? 250 : 400}
                         style={{ border: '0px solid', borderRadius: '50px 50px 50px 50px', borderColor: '#30a9ab', }}
                         alt="First slide"
                     />
