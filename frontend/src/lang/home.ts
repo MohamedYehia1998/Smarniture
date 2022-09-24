@@ -1,9 +1,9 @@
 const homeItems = {
     "en": {
-        "slogan": `Smart Furniture\n for all Purposes`,
+        "slogan": `Smart Furniture for all Purposes`,
     },
     "ar": {
-        "slogan": `أثاث ذكي\n لجميع الأغراض`,
+        "slogan": `أثاث ذكي لجميع الأغراض`,
     }
 }
 
